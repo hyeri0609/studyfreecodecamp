@@ -44,3 +44,17 @@ function destroyer(arr) {
 
 console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
 
+function getIndexToIns(arr, num) {
+  arr.push(num);
+  arr.sort(function(a, b){return a-b});
+  return arr.indexOf(num);
+}
+
+console.log(getIndexToIns([40, 60], 50));
+
+function rot13(str) { // LBH QVQ VG!
+  return str.replace(/[A-Z]/g, function(L) { return String.fromCharCode((L.charCodeAt(0) % 26) + 65); });
+}
+
+console.log(rot13("SERR PBQR PNZC"));
+console.log(rot13("LBH QVQ VG!"));

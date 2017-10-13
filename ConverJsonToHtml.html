@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>freecodecamp</title>
+  <style>body {padding: 0; margin: 0}</style>
+  
+
+</head>
+<body>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script  type="text/javascript">
+$(document).ready(function() {
+    $("#getMessage").on("click", function() {
+        $.getJSON("/json/cats.json", function(json) {
+            var html = "";
+            json.forEach(function(val) {
+                var keys = Object.keys(val);
+                html += "<div class = 'cat'>";
+                keys.forEach(function(key) {
+                html += "<strong>" + key + "</strong>: " + val[key] + "<br>";
+                });
+                html += "</div><br>";
+                
+                // html += "<div class = 'cat'>";
+                // html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>"
+                // html += "</div>";
+            });
+            $(".message").html(html);
+            
+            //$(".message").html(JSON.stringify(json));
+        });
+        
+        
+    });
+});
+    </script>
+
+    
+    
+    
+    <div class="container-fluid">
+  <div class = "row text-center">
+    <h2>Cat Photo Finder</h2>
+  </div>
+  <div class = "row text-center">
+    <div class = "col-xs-12 well message">
+      The message will go here
+   </div>
+  </div>
+  <div class = "row text-center">
+    <div class = "col-xs-12">
+      <button id = "getMessage" class = "btn btn-primary">
+        Get Message
+      </button>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+
+
+
