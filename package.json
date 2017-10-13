@@ -1,0 +1,23 @@
+{
+  "name": "studyfreecodecamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyeri0609/studyfreecodecamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyeri0609/studyfreecodecamp/issues"
+  },
+  "homepage": "https://github.com/hyeri0609/studyfreecodecamp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}
