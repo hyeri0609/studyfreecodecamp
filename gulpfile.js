@@ -9,7 +9,7 @@ gulp.task('webserver', function() {
       port:8080,
       host:"0.0.0.0",
       livereload: false,
-      directoryListing: false,
+      directoryListing: true,
       open: false
     }));
 });
